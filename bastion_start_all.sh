@@ -7,6 +7,9 @@
 # start_sshd
 ./tmp/bastion_start_sshd.sh &
 
+# apply firewall rules
+./tmp/bastion_firewall.sh &
+
 # wait for any process to exit
 wait -n
 

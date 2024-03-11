@@ -14,6 +14,7 @@
         - libfontconfig1
         - musl
         - curl
+        - iptables
       state: latest
       update_cache: true
 

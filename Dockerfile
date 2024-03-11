@@ -12,6 +12,6 @@ RUN apt update && apt install sudo ansible -y
 
 RUN ansible-playbook /tmp/${server}_playbook.yml
 
-COPY authorized_keys_bastion /home/${user}/.ssh/authorized_keys
+COPY --chown=${user}:root ${server}_ssh_keys /home/${user}/.ssh
 
 CMD ./tmp/${server}_start_all.sh
