@@ -30,5 +30,6 @@ if [ $status = 1 ]; then
     docker network rm oym
 fi
 
+docker container prune -f
 docker image prune -f
 docker ps --all
